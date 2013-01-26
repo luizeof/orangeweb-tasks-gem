@@ -3,6 +3,8 @@ orangeweb-tasks-gem
 
 Rake Tasks que utilizamos para auxiliar o desenvolvimento de Aplicações em Ruby on Rails.
 
+For Help with SemVer, please go to [Using SemVer Tasks](https://github.com/orangeweb/orangeweb-tasks-gem/wiki/Using-SemVer-Tasks) manual.
+
 
 ## Installing Gem
 
