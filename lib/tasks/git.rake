@@ -22,15 +22,21 @@ end
 # Git
 namespace :git do
 
-  # show 
+  desc "Tag last Commit with current semver version"
   task :tag do
-    Rake::Task['git:tag:show'].invoke
+    Rake::Task['git:tag:create'].invoke
   end # show
+  
+  desc "Push all repo, commits, branchs and tags"
+  task :push do
+    sh "git push --all"
+    sh "git push --tags"
+  end # git:tag:create  
 
 # Git Tag
 namespace :tag do
   	  
-  desc "Tag last Commit with a auto increment number prefix"
+  # create a commit with last semver
   task :create do
     tag = File.read("semver/WORKING")
     sh "git tag -a #{tag} -m #{tag}"
