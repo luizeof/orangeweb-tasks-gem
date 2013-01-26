@@ -23,6 +23,10 @@ end
 namespace :semver do
 
 
+	desc "Bumps Build Version"
+	task :bump do
+    Rake::Task['semver:bump:build'].invoke
+	end # luizeof:semver:bump
 
 	# shows current app version
 	task :show do
